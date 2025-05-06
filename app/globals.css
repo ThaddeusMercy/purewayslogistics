@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@layer theme, base, components, utilities;
+@config "../tailwind.config.js";
 
 :root {
   --background: #ffffff;
@@ -23,4 +25,46 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  /* .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary-100 text-secondary-800 hover:bg-secondary-200 focus:ring-secondary-500;
+  }
+
+  .btn-outline {
+    @apply btn bg-transparent text-accent-500 hover:bg-accent-50 focus:ring-accent-500;
+  } */
+
+  .nav-link {
+    @apply text-white hover:text-accent-500 transition-colors duration-200;
+  }
+
+  .nav-link-active {
+    @apply text-accent-500 font-medium;
+  }
+/* 
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .card {
+    @apply bg-white rounded-xl p-6 transition-all duration-200;
+  }
+
+  .feature-card {
+    @apply card hover:-translate-y-1;
+  } */
 }
