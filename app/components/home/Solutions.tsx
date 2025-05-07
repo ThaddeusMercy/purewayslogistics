@@ -20,7 +20,7 @@ const Solutions: React.FC = () => {
                 Our team develops customized solutions that address the unique logistics challenges of businesses across industries. Whether you're a small startup or a large enterprise, we have the expertise and resources to optimize your supply chain and deliver your goods safely and efficiently.
               </p>
               <p className="text-base leading-relaxed">
-                With our comprehensive range of services, cutting-edge technology, and dedicated team of professionals, we can help you overcome any logistics challenge and achieve your business goals.
+                With our comprehensive range of services, cutting-edge technology, and dedicated team of professionals, we can help you overcome any logistics challenge and achieve your business objectives.
               </p>
             </div>
           </div>

@@ -20,7 +20,7 @@ const CourierServices: React.FC = () => {
     {
       icon: <Truck size={24} />,
       title: "Last-Mile Delivery",
-      description: "We deliver packages safely and efficiently to our partner's customers' doorsteps. Our trained and professional Delivery Associates ensure that every parcel reaches its destination on time, every time — with care and precision."
+      description: "We deliver parcels safely and efficiently to our partner's customers' doorsteps. Our trained and professional Delivery Associates ensure that every parcel reaches its destination on time, every time — with care and precision."
     },
     {
       icon: <Route size={24} />,
@@ -30,7 +30,7 @@ const CourierServices: React.FC = () => {
     {
       icon: <Shield size={24} />,
       title: "Safety-First Operations",
-      description: "Safety is at the heart of what we do. We provide extensive training to all Delivery Associates, promoting safe driving practices and secure handling of packages."
+      description: "Safety is at the heart of what we do. We provide extensive training to all Delivery Associates, promoting safe driving practices and secure handling of parcels."
     },
     {
       icon: <Users size={24} />,
@@ -40,7 +40,7 @@ const CourierServices: React.FC = () => {
     {
       icon: <Box size={24} />,
       title: "Parcel Handling and Customer Service",
-      description: "Our team not only ensures fast delivery but also takes pride in providing exceptional customer service. Every package is treated with respect and care, and every interaction is conducted professionally to enhance customer satisfaction."
+      description: "Our team not only ensures fast delivery but also takes pride in providing exceptional customer service. Every parcel is treated with respect and care, and every interaction is conducted professionally to enhance customer satisfaction."
     },
     {
       icon: <LineChart size={24} />,

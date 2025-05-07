@@ -13,8 +13,8 @@ const Logo: React.FC<LogoProps> = () => {
       <Image 
         src="/logo.png" 
         alt="Pureway Logistics" 
-        width="180" 
-        height="140"
+        width="150" 
+        height="150"
         className="object-contain"
       />
     </div>

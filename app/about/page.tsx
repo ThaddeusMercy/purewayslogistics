@@ -19,7 +19,7 @@ const About: React.FC = () => {
   const values = [
     {
       title: "Integrity",
-      description: "We operate with honesty, transparency, and respect — in every package, every promise, every time."
+      description: "We operate with honesty, transparency, and respect — in every parcel, every promise, every time."
     },
     {
       title: "Safety",
@@ -27,11 +27,11 @@ const About: React.FC = () => {
     },
     {
       title: "Community",
-      description: "Our strength comes from the diverse local teams that power our deliveries and represent the neighborhoods we serve."
+      description: "Our strength comes from the diverse local teams that power our deliveries and represent the neighbourhoods we serve."
     },
     {
       title: "Customer Commitment",
-      description: "We go the extra mile to ensure satisfaction — not just delivering packages, but delivering peace of mind."
+      description: "We go the extra mile to ensure satisfaction — not just delivering parcels, but delivering peace of mind."
     },
     {
       title: "Teamwork",
@@ -96,11 +96,11 @@ const About: React.FC = () => {
             />
 
             <div className="space-y-4 text-secondary-700">
-              At Pureways Logistics, we don't just deliver packages — we deliver trust, speed, and reliability to every doorstep. As a specialized courier service operating within the logistics network of one of the world's largest e-commerce giants, our mission is clear: ensure that every delivery is timely, safe, and handled with care. <br /> <br />
-              Rooted in our local communities, Pureways Logistics is proud to be more than a logistics company. We are a people-powered business — one that values diversity, inclusion, and the strength of local engagement. By hiring local drivers and investing in community talent, we've built a dynamic team that reflects the neighborhoods we serve and fuels our commitment to excellence. <br /> <br /> 
-              Our workforce is the heartbeat of our success. From dedicated drivers to the support staff behind the scenes, each team member plays a vital role in upholding our values. We are unwavering in our dedication to creating a safe, supportive, and rewarding environment for every employee — because when our team thrives, so do our customers. <br /> <br /> 
-              At Pureways, customer satisfaction isn't a goal — it's a promise. Every interaction, every delivery, and every mile we cover is designed to create a seamless and positive experience for our customers. <br /> <br />    
-              With Pureways Logistics, you're not just choosing a courier service. You're choosing a committed, community-focused, and values-driven partner in logistics. Let's deliver the future — together.
+              At Pureways Logistics, we don't just deliver parcels — we deliver trust, speed, and reliability to every doorstep. As a specialist courier firm operating within the logistics network of one of the world's largest online retailers, our mission is clear: ensure that every delivery is timely, safe, and handled with care. <br /> <br />
+              Rooted in our local communities, Pureways Logistics is proud to be more than a logistics company. We are a people-powered business — one that values diversity, inclusivity, and the strength of local engagement. By hiring local drivers and investing in local talent, we've built an agile team that reflects the neighbourhoods we serve and drives our commitment to excellence. <br /> <br /> 
+              Our workforce is at the heart of our success. From dedicated drivers to the support staff behind the scenes, each team member plays a vital role in upholding our Principles. We are unwavering in our commitment to creating a safe, supportive, and fulfilling workspace for every employee — because when our team thrives, so do our customers. <br /> <br /> 
+              At Pureways, customer satisfaction isn't an objective — it's a promise. Every interaction, every delivery, and every mile we cover is designed to create a seamless and positive experience for our customers. <br /> <br />    
+              With Pureways Logistics, you're not just choosing a courier firm. You're choosing a committed, community-focused, and principles-driven partner in logistics. Let's deliver the future — together.
 
             </div>
           </motion.div>
@@ -140,7 +140,7 @@ const About: React.FC = () => {
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 text-primary-600">Our Mission</h3>
               <p className="text-secondary-700 leading-relaxed">
-              To redefine last-mile delivery by combining technology, teamwork, and trust. We aim to provide fast, dependable, and customer-centric courier services while empowering local communities through job creation and inclusivity.
+              To redefine last-mile delivery by combining technology, teamwork, and trust. We aim to provide fast, dependable, and customer-centric courier firm while empowering local communities through job creation and inclusivity.
 
               </p>
             </div>
@@ -161,7 +161,7 @@ const About: React.FC = () => {
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 text-accent-500">Our Vision</h3>
               <p className="text-secondary-700 leading-relaxed">
-              To be the most respected and community-rooted courier service in the industry — known for our reliability, our people, and our unwavering commitment to delivering excellence every day.
+              To be the most respected and community-rooted courier firm in the industry — known for our reliability, our people, and our unwavering commitment to delivering excellence every day.
 
               </p>
             </div>
@@ -197,25 +197,25 @@ const About: React.FC = () => {
           >
             <SectionTitle
               title="Our Workforce"
-              subtitle="The heartbeat of our success."
+              subtitle="At the heart of our success."
             />
 
             <div className="space-y-4 text-secondary-700">
               <p>
-                Our workforce is the heartbeat of our success. From dedicated drivers to the support staff behind the scenes, each team member plays a vital role in upholding our values. We are unwavering in our dedication to creating a safe, supportive, and rewarding environment for every employee — because when our team thrives, so do our customers.
+                Our workforce is at the heart of our success. From dedicated drivers to the support staff behind the scenes, each team member plays a vital role in upholding our principles. We are unwavering in our commitment to creating a safe, supportive, and fulfilling workspace for every employee — because when our team thrives, so do our customers.
               </p>
               <p>
-                At Pureways, customer satisfaction isn't a goal — it's a promise. Every interaction, every delivery, and every mile we cover is designed to create a seamless and positive experience for our customers.
+                At Pureways, customer satisfaction isn't an objective — it's a promise. Every interaction, every delivery, and every mile we cover is designed to create a seamless and positive experience for our customers.
               </p>
             </div>
           </motion.div>
         </div>
       </Section>
 
-      {/* Our Values */}
+      {/* Our Principles */}
       <Section bgColor="bg-secondary-50">
         <SectionTitle
-          title="Our Core Values"
+          title="Our Core Principles"
           subtitle="The principles that guide everything we do at Pureways."
           centered
         />
@@ -237,7 +237,7 @@ const About: React.FC = () => {
         </div>
       </Section>
 
-      {/* Diversity & Inclusion */}
+      {/* Diversity & Inclusivity */}
       <Section bgColor="bg-white">
         <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
@@ -248,9 +248,9 @@ const About: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="p-10 lg:p-16 flex flex-col justify-center"
             >
-              <h3 className="text-3xl font-bold mb-5 text-primary-700">Diversity | Equity | Inclusion</h3>
+              <h3 className="text-3xl font-bold mb-5 text-primary-700">Diversity | Equity | Inclusivity</h3>
               <p className="text-secondary-700 text-lg">
-              At Pureways Logistics, our team is a reflection of the communities we serve. We celebrate diversity and champion inclusion by hiring from all walks of life and providing equal opportunities for growth, development, and success.
+              At Pureways Logistics, our team is a reflection of the communities we serve. We celebrate diversity and champion inclusivity by hiring from all walks of life and providing equal opportunities for growth, development, and success.
 
               </p>
             </motion.div>

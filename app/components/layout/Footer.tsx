@@ -27,13 +27,13 @@ const Footer: React.FC = () => {
               Timely and Reliable Delivery Services
             </h2>
             <p className="text-[#9b9b9b] tracking-[-0.02em] mb-6 md:mb-8 max-w-lg mx-auto md:mx-0 text-sm sm:text-base">
-              At Pureways Logistics, we understand that every package represents a promise - and we make it our mission to deliver on time, every time.
+              At Pureways Logistics, we understand that every parcel represents a promise - and we make it our mission to deliver on time, every time.
                <br /> <br />
               When you choose Pureways, you're choosing a partner you can depend on — because at Pureways Logistics, delivering excellence every mile is not just our slogan, It's our standard.
             </p>
             <Link
               href="/contact"
-              className="bg-[#FF6B00] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md font-medium cursor-pointer transition hover:bg-[#E05E00] text-sm sm:text-base"
+              className="bg-[#FF6B00] text-white px-4 sm:px-6 py-2 lg:w-fit sm:py-3 rounded-md font-medium cursor-pointer transition hover:bg-[#E05E00] text-sm sm:text-base"
             >
               Get Started
             </Link>
@@ -98,15 +98,15 @@ const Footer: React.FC = () => {
                 </li>
                 <li className="flex items-center justify-center lg:justify-start">
                   <Mail size={16} className="mr-2 md:mr-3 text-[#FF6B00] flex-shrink-0" />
-                  <a href="mailto:info@pureway-logistics.co.uk" className="text-secondary-200 hover:text-[#FF6B00] transition-colors text-xs sm:text-sm md:text-base break-all">
-                    info@pureway-logistics.co.uk
+                  <a href="mailto:office@purewayslogistics.co.uk" className="text-secondary-200 hover:text-[#FF6B00] transition-colors text-xs sm:text-sm md:text-base break-all">
+                  office@purewayslogistics.co.uk
                   </a>
                 </li>
                 <li className="flex items-center justify-center lg:justify-start">
                   <Phone size={16} className="mr-2 md:mr-3 text-[#FF6B00] flex-shrink-0" />
-                  <span className="text-secondary-200 text-xs sm:text-sm md:text-base">
-                    +44 (0) 7770 590 955
-                  </span>
+                  <a href="tel:+447544415535" className="text-secondary-200 hover:text-[#FF6B00] transition-colors text-xs sm:text-sm md:text-base">
+                    +44 7544 415 535
+                  </a>
                 </li>
               </ul>
             </div>
@@ -128,14 +128,14 @@ const Footer: React.FC = () => {
             <p className="text-secondary-400 text-xs text-center md:text-left">
               &copy; {currentYear} Pureway Logistics. All rights reserved.
             </p>
-            {/* <div className="mt-3 sm:mt-4 md:mt-0 flex justify-center md:justify-end space-x-4 md:space-x-6">
+            <div className="mt-3 sm:mt-4 md:mt-0 flex justify-center md:justify-end space-x-4 md:space-x-6">
+              <Link href="/terms" className="text-secondary-400 hover:text-[#FF6B00] text-xs transition-colors">
+                Terms and Conditions
+              </Link>
               <Link href="/privacy-policy" className="text-secondary-400 hover:text-[#FF6B00] text-xs transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms-of-service" className="text-secondary-400 hover:text-[#FF6B00] text-xs transition-colors">
-                Terms of Service
-              </Link>
-            </div> */}
+            </div>
           </div>
         </div>
       </footer>

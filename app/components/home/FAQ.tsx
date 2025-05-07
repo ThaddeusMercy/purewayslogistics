@@ -14,7 +14,7 @@ const FAQ: React.FC = () => {
     const faqs = [
         {
             question: 'What shipping services does Pureways Logistics provide?',
-            answer: 'We offer comprehensive shipping solutions including international freight forwarding, domestic shipping, express delivery, warehousing, and specialized cargo handling. Our services cover air, sea, and land transportation to meet all your logistics needs.',
+            answer: 'We offer comprehensive shipping solutions including international freight forwarding, domestic shipping, express delivery, warehousing, and specialist cargo handling. Our services cover air, sea, and land transportation to meet all your logistics needs.',
         },
         {
             question: 'How can I track my shipment status?',

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaTruck, FaBoxes, FaExchangeAlt, FaAward, FaHeadset, FaRocket, FaClock, FaRoute, FaShieldAlt } from 'react-icons/fa';
+import { FaTruck, FaBoxes, FaExchangeAlt, FaAward, FaHeadset, FaClock, FaShieldAlt } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -27,7 +27,7 @@ const Services: React.FC = () => {
               <div className="bg-white p-6 md:p-8 lg:p-12 rounded-lg shadow-2xl border border-transparent h-auto lg:h-[550px] flex flex-col"> 
                 <div className="space-y-4 md:space-y-6">
                   <h3 className="text-3xl md:text-4xl font-bold text-gray-900">Last-Mile Delivery</h3>
-                  <p className="text-sm md:text-base text-gray-700">We deliver packages safely and efficiently to our partner's customers' doorsteps. Our trained and professional Delivery Associates ensure that every parcel reaches its destination on time, every time — with care and precision.</p>
+                  <p className="text-sm md:text-base text-gray-700">We deliver parcels safely and efficiently to our partner's customers' doorsteps. Our trained and professional Delivery Associates ensure that every parcel reaches its destination on time, every time — with care and precision.</p>
                   <div className="">
                     <div className="grid grid-cols-1 gap-4 md:gap-6 mt-6 md:mt-12">
                       <div className="flex items-center gap-3">
@@ -36,7 +36,7 @@ const Services: React.FC = () => {
                       </div>
                       <div className="flex items-center gap-3">
                         <FaBoxes className="text-gray-700 text-lg md:text-xl" />
-                        <span className="text-gray-500 text-sm md:text-base">Safe Package Handling</span>
+                        <span className="text-gray-500 text-sm md:text-base">Safe Parcel Handling</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <FaExchangeAlt className="text-gray-700 text-lg md:text-xl" />
@@ -95,21 +95,21 @@ const Services: React.FC = () => {
             >
               <div className="bg-white p-6 md:p-8 lg:p-12 rounded-lg shadow-2xl border border-transparent h-auto lg:h-[550px] flex flex-col">
                 <div className="space-y-4 md:space-y-6">
-                  <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3 md:mb-4">Route Management & Optimization</h3>
-                  <p className="text-sm md:text-base text-gray-700">We expertly manage and optimize delivery routes, ensuring maximum efficiency while meeting our clients service and timing expectations.</p>
+                  <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3 md:mb-4">Excellent Customer Support</h3>
+                  <p className="text-sm md:text-base text-gray-700">Our customer-centric approach ensures you receive exceptional support throughout your logistics journey with us.</p>
                   <div className="">
                     <div className="grid grid-cols-1 gap-4 md:gap-6 mt-6 md:mt-12">
                       <div className="flex items-center gap-3">
-                        <FaRoute className="text-gray-700 text-lg md:text-xl" />
-                        <span className="text-gray-500 text-sm md:text-base">Optimized Delivery Routes</span>
+                        <FaHeadset className="text-gray-700 text-lg md:text-xl" />
+                        <span className="text-gray-500 text-sm md:text-base">We Keep You in the Loop</span>
                       </div>
                       <div className="flex items-center gap-3">
                         <FaClock className="text-gray-700 text-lg md:text-xl" />
-                        <span className="text-gray-500 text-sm md:text-base">Real-time Updates</span>
+                        <span className="text-gray-500 text-sm md:text-base">Always Updated and Easy to Reach</span>
                       </div>
                       <div className="flex items-center gap-3">
-                        <FaRocket className="text-gray-700 text-lg md:text-xl" />
-                        <span className="text-gray-500 text-sm md:text-base">Efficient Navigation</span>
+                        <FaShieldAlt className="text-gray-700 text-lg md:text-xl" />
+                        <span className="text-gray-500 text-sm md:text-base">Problems Solved Quickly</span>
                       </div>
                     </div>
                   </div>
@@ -135,7 +135,7 @@ const Services: React.FC = () => {
               <div className="bg-white p-6 md:p-8 lg:p-12 rounded-lg shadow-2xl border border-transparent h-auto lg:h-[550px] flex flex-col"> 
                 <div className="space-y-4 md:space-y-6">
                   <h3 className="text-3xl md:text-4xl font-bold text-gray-900">Safety-First Operations</h3>
-                  <p className="text-sm md:text-base text-gray-700">Safety is at the heart of what we do. We provide extensive training to all Delivery Associates, promoting safe driving practices and secure handling of packages.</p>
+                  <p className="text-sm md:text-base text-gray-700">Safety is at the heart of what we do. We provide extensive training to all Delivery Associates, promoting safe driving practices and secure handling of parcels.</p>
                   <div className="">
                     <div className="grid grid-cols-1 gap-4 md:gap-6 mt-6 md:mt-12">
                       <div className="flex items-center gap-3">

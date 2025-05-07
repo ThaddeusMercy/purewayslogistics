@@ -29,10 +29,10 @@ const AboutSection: React.FC = () => {
               
               <div className="space-y-3 sm:space-y-4 text-gray-100/90  mb-6 sm:mb-8 text-sm sm:text-base">
                 <p>
-                Pureways Logistics is specialized courier service operating within the logistics network of one of the world's largest e-commerce giants, our mission is clear: ensure that every delivery is timely, safe, and handled with care.
+                Pureways Logistics is specialist courier firm operating within the logistics network of one of the world's largest online retailers, our mission is clear: ensure that every delivery is timely, safe, and handled with care.
                 </p>
                 <p>
-                With Pureways Logistics, you're not just choosing a courier service. You're choosing a committed, community-focused, and values-driven partner in logistics. Let's deliver the future — together.
+                With Pureways Logistics, you're not just choosing a courier firm. You're choosing a committed, community-focused, and principles-driven partner in logistics. Let's deliver the future — together.
                 </p>
               </div>
               

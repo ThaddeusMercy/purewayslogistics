@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Hero = () => {
@@ -9,7 +10,7 @@ const Hero = () => {
   const carouselData = [
     {
       image: '/images/landscape1.png',
-      title: "We Offer Trust, Speed and Reliability To Every Doorstep"
+      title: "We Offer Trust, Efficiency and dependability To Every Doorstep"
     },
     {
       image: '/images/landscapepureway.png',
@@ -117,9 +118,11 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
-                <button className="bg-[#FF6600] text-white px-5 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base rounded-md font-medium cursor-pointer transition hover:bg-[#D35400]">
-               Join Us
-                </button>
+                <Link href="/join-us">
+                  <button className="bg-[#FF6600] text-white px-5 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base rounded-md font-medium cursor-pointer transition hover:bg-[#D35400]">
+                    Join Us
+                  </button>
+                </Link>
               </motion.div>
             </motion.div>
           </div>

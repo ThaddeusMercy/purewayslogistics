@@ -54,12 +54,12 @@ const Contact: React.FC = () => {
     {
       icon: <Phone size={24} />,
       title: "Phone Numbers",
-      details: ["+44 (0) 7770 590 955"]
+      details: ["+44 7544 415 535"]
     },
     {
       icon: <Mail size={24} />,
       title: "Email Addresses",
-      details: ["info@pureway-logistics.co.uk"]
+      details: ["office@purewayslogistics.co.uk"]
     },
     {
       icon: <Clock size={24} />,
@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
               Contact Us
             </h1>
             <p className="text-xl text-white mb-8">
-              Have questions about our courier services? Reach out to our team and we'll be happy to help.
+              Have questions about our Courier Firm? Reach out to our team and we'll be happy to help.
             </p>
           </motion.div>
         </div>
@@ -251,7 +251,17 @@ const Contact: React.FC = () => {
                     <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
                     {item.details.map((detail, i) => (
                       <p key={i} className="text-secondary-700">
-                        {detail}
+                        {item.title === "Phone Numbers" ? (
+                          <a href="tel:+447544415535" className="text-secondary-700 hover:text-accent-500 transition-colors">
+                            {detail}
+                          </a>
+                        ) : item.title === "Email Addresses" ? (
+                          <a href={`mailto:${detail}`} className="text-secondary-700 hover:text-accent-500 transition-colors">
+                            {detail}
+                          </a>
+                        ) : (
+                          detail
+                        )}
                       </p>
                     ))}
                   </div>

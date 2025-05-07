@@ -22,7 +22,8 @@ const ApplicationForm: React.FC = () => {
     selfEmployed: '',
     workEligibility: '',
     startDate: '',
-    additionalInfo: ''
+    additionalInfo: '',
+    termsAccepted: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error', message: string } | null>(null);
@@ -56,9 +57,12 @@ const ApplicationForm: React.FC = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    const isCheckbox = (e.target as HTMLInputElement).type === 'checkbox';
+    const checked = isCheckbox ? (e.target as HTMLInputElement).checked : false;
+    
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: isCheckbox ? checked : value
     }));
   };
 
@@ -73,7 +77,9 @@ const ApplicationForm: React.FC = () => {
       
       // Add all form fields
       Object.entries(formData).forEach(([key, value]) => {
-        submitData.append(key, value);
+        // Convert boolean to string for FormData
+        const formValue = typeof value === 'boolean' ? String(value) : value;
+        submitData.append(key, formValue);
       });
       
       // Add CV file if selected
@@ -105,7 +111,8 @@ const ApplicationForm: React.FC = () => {
           selfEmployed: '',
           workEligibility: '',
           startDate: '',
-          additionalInfo: ''
+          additionalInfo: '',
+          termsAccepted: false
         });
         setSelectedFile(null);
         setFileName('');
@@ -135,7 +142,7 @@ const ApplicationForm: React.FC = () => {
       transition={{ duration: 0.3 }}
     >
       <Section bgColor="bg-white">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto lg:py-10 py-8">
           <button
             onClick={() => router.back()}
             className="flex items-center text-[#FF6B00] hover:text-[#e05e00] transition-colors mb-6"
@@ -432,6 +439,26 @@ const ApplicationForm: React.FC = () => {
                 onChange={handleInputChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#FF6B00] focus:border-transparent"
               />
+            </div>
+
+            <div className="flex items-start mb-4">
+              <div className="flex items-center h-5">
+                <input
+                  id="termsAccepted"
+                  name="termsAccepted"
+                  type="checkbox"
+                  required
+                  checked={formData.termsAccepted}
+                  onChange={handleInputChange}
+                  className="w-4 h-4 border border-gray-300 rounded appearance-none checked:bg-[#FF6B00] checked:border-[#FF6B00] focus:ring-2 focus:ring-[#FF6B00] relative"
+                  style={{ backgroundImage: formData.termsAccepted ? "url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox=%270 0 16 16%27 fill=%27white%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3E%3C/svg%3E')" : "", backgroundSize: "100% 100%", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}
+                />
+              </div>
+              <div className="ml-3 text-sm">
+                <label htmlFor="termsAccepted" className="font-medium text-secondary-700">
+                  I have read the <a href="/terms" target="_blank" className="text-[#FF6B00] hover:underline">terms and conditions</a> and agree to it. <span className="text-red-500">*</span>
+                </label>
+              </div>
             </div>
 
             {submitStatus && (

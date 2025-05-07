@@ -28,7 +28,7 @@ const Careers: React.FC = () => {
     {
       icon: <Home size={24} />,
       title: "Local Routes",
-      description: "Work close to home with routes in familiar neighborhoods."
+      description: "Work close to home with routes in familiar neighbourhoods."
     },
     {
       icon: <Clock size={24} />,
@@ -107,7 +107,7 @@ const Careers: React.FC = () => {
           >
             <h2 className="text-3xl font-bold text-secondary-900">Be Your Own Boss</h2>
             <p className="text-lg text-secondary-700">
-              Our Delivery Associates are self-employed, giving you the freedom to manage your own schedule, enjoy greater flexibility, and take control of your earnings. As part of our trusted delivery network, you'll play a key role in ensuring packages reach our customers safely and on time, while working independently with the full support of our experienced team.
+              Our Delivery Associates are self-employed, giving you the freedom to manage your own schedule, enjoy greater flexibility, and take control of your earnings. As part of our trusted delivery network, you'll play a key role in ensuring parcels reach our customers safely and on time, while working independently with the full support of our experienced team.
             </p>
             <p className="text-lg text-secondary-700">
               If you're hardworking, customer-focused, and ready to hit the road, we want to hear from you. Join Pureways Logistics today and drive your future forward!
@@ -197,7 +197,7 @@ const Careers: React.FC = () => {
       <Section bgColor="bg-white">
         <SectionTitle
           title="Why Work With Us"
-          subtitle="Join a team that delivers more than packages — we deliver opportunity."
+          subtitle="Join a team that delivers more than parcels — we deliver opportunity."
           centered
         />
 
@@ -281,7 +281,7 @@ const Careers: React.FC = () => {
         </div>
       </Section>
 
-      {/* Our Values */}
+      {/* Our Principles */}
       <Section bgColor="bg-white">
         <div className="max-w-6xl mx-auto">
           <SectionTitle
