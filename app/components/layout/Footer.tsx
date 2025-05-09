@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
             <div className="flex flex-col items-center">
               <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-4 md:mb-6 text-white">Social Links</h4>
               <div className="flex space-x-4">
-                <a href="#" className="text-white hover:text-[#FF6B00] transition-colors">
+                <a href="https://www.linkedin.com/company/pureways-logistics-ltd/?viewAsMember=true" className="text-white hover:text-[#FF6B00] transition-colors">
                   <Linkedin size={16} />
                 </a>
                 <a href="#" className="text-white hover:text-[#FF6B00] transition-colors">
