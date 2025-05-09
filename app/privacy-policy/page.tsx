@@ -40,10 +40,7 @@ export default function PrivacyPolicyPage() {
     return activeSection === sectionId ? 'text-[#FF6B00]' : '';
   };
   
-  const isActiveParent = (sectionId: string, childIds: string[]) => {
-    if (activeSection === sectionId) return true;
-    return childIds.some(id => activeSection === id);
-  };
+
   return (
     <main className="container-custom py-12 md:py-16 lg:py-24">
       <div className="flex flex-col lg:flex-row gap-8">
