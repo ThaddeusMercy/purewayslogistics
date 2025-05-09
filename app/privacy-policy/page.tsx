@@ -79,7 +79,6 @@ export default function PrivacyPolicyPage() {
                 <a href="#law-enforcement" className={`block transition-colors pl-6 ${isActive('law-enforcement') ? 'text-[#FF6B00]' : ''}`}>Law enforcement</a>
                 <a href="#legal-requirements" className={`block transition-colors pl-6 ${isActive('legal-requirements') ? 'text-[#FF6B00]' : ''}`}>Other legal requirem...</a>
                 <a href="#security" className={`block transition-colors font-medium mt-4 ${isActive('security') ? 'text-[#FF6B00]' : ''}`}>Security of Your Person...</a>
-                <a href="#children" className={`block transition-colors font-medium mt-4 ${isActive('children') ? 'text-[#FF6B00]' : ''}`}>Children's Privacy</a>
                 <a href="#links" className={`block transition-colors font-medium mt-4 ${isActive('links') ? 'text-[#FF6B00]' : ''}`}>Links to Other Websites</a>
                 <a href="#changes" className={`block transition-colors font-medium mt-4 ${isActive('changes') ? 'text-[#FF6B00]' : ''}`}>Changes to this Privacy ...</a>
                 <a href="#contact" className={`block transition-colors font-medium mt-4 ${isActive('contact') ? 'text-[#FF6B00]' : ''}`}>Contact Us</a>
@@ -127,8 +126,6 @@ export default function PrivacyPolicyPage() {
               
               <a href="#security" className={`block transition-colors font-medium mt-4 ${isActive('security') ? 'text-[#FF6B00]' : ''}`}>Security of Your Person...</a>
               
-              <a href="#children" className={`block transition-colors font-medium mt-4 ${isActive('children') ? 'text-[#FF6B00]' : ''}`}>Children's Privacy</a>
-              
               <a href="#links" className={`block transition-colors font-medium mt-4 ${isActive('links') ? 'text-[#FF6B00]' : ''}`}>Links to Other Websites</a>
               
               <a href="#changes" className={`block transition-colors font-medium mt-4 ${isActive('changes') ? 'text-[#FF6B00]' : ''}`}>Changes to this Privacy ...</a>
@@ -167,18 +164,8 @@ export default function PrivacyPolicyPage() {
               </p>
               
               <h3 className="text-xl font-bold mt-6" id="definitions-section">Definitions</h3>
-              <p>For the purposes of this Privacy Policy:</p>
+              
               <ul className="list-disc pl-6 space-y-2">
-                <li>
-                  <strong>Account</strong> means a unique account created for You to access our Service or parts of
-                  our Service.
-                </li>
-                <li>
-                  <strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control
-                  with a party, where "control" means ownership of 50% or more of the shares, equity
-                  interest or other securities entitled to vote for election of directors or other
-                  managing authority.
-                </li>
                 <li>
                   <strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this
                   Agreement) refers to Pureways Logistics LTD, Liverpool UK.
@@ -324,41 +311,13 @@ export default function PrivacyPolicyPage() {
               <p>The Company may use Personal Data for the following purposes:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
-                  <strong>To provide and maintain our Service</strong>, including to monitor the usage of our Service.
-                </li>
-                <li>
-                  <strong>To manage Your Account</strong>: to manage Your registration as a user of the Service. The
-                  Personal Data You provide can give You access to different functionalities of the
-                  Service that are available to You as a registered user.
-                </li>
-                <li>
-                  <strong>For the performance of a contract</strong>: the development, compliance and undertaking of
-                  the purchase contract for the products, items or services You have purchased or of any
-                  other contract with Us through the Service.
-                </li>
-                <li>
                   <strong>To contact You</strong>: To contact You by email, telephone calls, SMS, or other equivalent
                   forms of electronic communication, such as a mobile application's push notifications
                   regarding updates or informative communications related to the functionalities,
                   products or contracted services, including the security updates, when necessary or
                   reasonable for their implementation.
                 </li>
-                <li>
-                  <strong>To provide You</strong> with news, special offers and general information about other
-                  goods, services and events which we offer that are similar to those that you have
-                  already purchased or enquired about unless You have opted not to receive such
-                  information.
-                </li>
-                <li>
-                  <strong>To manage Your requests</strong>: To attend and manage Your requests to Us.
-                </li>
-                <li>
-                  <strong>For business transfers</strong>: We may use Your information to evaluate or conduct a
-                  merger, divestiture, restructuring, reorganization, dissolution, or other sale or
-                  transfer of some or all of Our assets, whether as a going concern or as part of
-                  bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about
-                  our Service users is among the assets transferred.
-                </li>
+              
                 <li>
                   <strong>For other purposes</strong>: We may use Your information for other purposes, such as data
                   analysis, identifying usage trends, determining the effectiveness of our promotional
@@ -374,11 +333,6 @@ export default function PrivacyPolicyPage() {
                   Providers to monitor and analyze the use of our Service, to contact You.
                 </li>
                 <li>
-                  <strong>For business transfers</strong>: We may share or transfer Your personal information in
-                  connection with, or during negotiations of, any merger, sale of Company assets,
-                  financing, or acquisition of all or a portion of Our business to another company.
-                </li>
-                <li>
                   <strong>With Affiliates</strong>: We may share Your information with Our affiliates, in which case
                   we will require those affiliates to honor this Privacy Policy. Affiliates include Our
                   parent company and any other subsidiaries, joint venture partners or other companies
@@ -392,10 +346,6 @@ export default function PrivacyPolicyPage() {
                   <strong>With other users</strong>: when You share personal information or otherwise interact in
                   the public areas with other users, such information may be viewed by all users and may
                   be publicly distributed outside.
-                </li>
-                <li>
-                  <strong>With Your consent</strong>: We may disclose Your personal information for any other
-                  purpose with Your consent.
                 </li>
               </ul>
             </section>
@@ -501,22 +451,6 @@ export default function PrivacyPolicyPage() {
               </p>
             </section>
 
-            <section id="children" className="mt-8">
-              <h2 className="text-2xl font-bold">Children's Privacy</h2>
-              <p>
-                Our Service does not address anyone under the age of 13. We do not knowingly collect
-                personally identifiable information from anyone under the age of 13. If You are a parent
-                or guardian and You are aware that Your child has provided Us with Personal Data, please
-                contact Us. If We become aware that We have collected Personal Data from anyone under the
-                age of 13 without verification of parental consent, We take steps to remove that
-                information from Our servers.
-              </p>
-              <p>
-                If We need to rely on consent as a legal basis for processing Your information and Your
-                country requires consent from a parent, We may require Your parent's consent before We
-                collect and use that information.
-              </p>
-            </section>
 
             <section id="links" className="mt-8">
               <h2 className="text-2xl font-bold">Links to Other Websites</h2>
