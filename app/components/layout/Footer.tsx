@@ -27,9 +27,9 @@ const Footer: React.FC = () => {
               Timely and Reliable Delivery Services
             </h2>
             <p className="text-[#9b9b9b] tracking-[-0.02em] mb-6 md:mb-8 max-w-lg mx-auto md:mx-0 text-sm sm:text-base">
-              At Pureways Logistics, we understand that every parcel represents a promise - and we make it our mission to deliver on time, every time.
+              At Pureways Logistics, we understand that every parcel represents a commitment - and we make it our mission to deliver on time, every time.
                <br /> <br />
-              When you choose Pureways, you're choosing a partner you can depend on — because at Pureways Logistics, delivering excellence every mile is not just our slogan, It's our standard.
+              When you choose Pureways, you're choosing a partner you can rely on — because at Pureways Logistics, achieving excellence every kilometre is not just our slogan, It's our standard.
             </p>
             <Link
               href="/contact"
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
                 <Logo isWhite />
               </div>
               <p className="text-secondary-200 text-xs sm:text-sm max-w-xs mx-auto lg:mx-0">
-                Your trusted partner for reliable courier and logistics solutions, helping businesses operate efficiently and grow confidently.
+                Your trusted partner for reliable courier and logistics solutions, helping businesses operate efficiently and grow with confidence.
               </p>
             </div>
 
@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
 
           <div className="px-4 sm:px-8 md:pl-8 md:pr-8 lg:pl-24 lg:pr-4 pt-4 sm:pt-6 md:pt-8 border-t border-secondary-700 flex flex-col md:flex-row md:justify-between md:items-center">
             <p className="text-secondary-400 text-xs text-center md:text-left">
-              &copy; {currentYear} Pureway Logistics. All rights reserved.
+              &copy; {currentYear} Pureways Logistics. All rights reserved.
             </p>
             <div className="mt-3 sm:mt-4 md:mt-0 flex justify-center md:justify-end space-x-4 md:space-x-6">
               <Link href="/terms" className="text-secondary-400 hover:text-[#FF6B00] text-xs transition-colors">

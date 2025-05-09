@@ -19,23 +19,23 @@ const About: React.FC = () => {
   const values = [
     {
       title: "Integrity",
-      description: "We operate with honesty, transparency, and respect — in every parcel, every promise, every time."
+      description: "We operate with honesty, transparency, and respect — in every parcel, every commitment, every time."
     },
     {
       title: "Safety",
-      description: "We prioritize the safety and well-being of our drivers and customers above all else."
+      description: "We prioritise the safety and well-being of our drivers and customers above all else."
     },
     {
       title: "Community",
       description: "Our strength comes from the diverse local teams that power our deliveries and represent the neighbourhoods we serve."
     },
     {
-      title: "Customer Commitment",
-      description: "We go the extra mile to ensure satisfaction — not just delivering parcels, but delivering peace of mind."
+      title: "Customers Commitment",
+      description: "We go the extra kilometre to ensure satisfaction — not just delivering parcels, but delivering peace of mind."
     },
     {
       title: "Teamwork",
-      description: "Every delivery is a group effort, and we thrive by supporting and uplifting each other."
+      description: "Every delivery is a team effort, and we thrive by supporting and uplifting each other."
     }
   ];
 
@@ -97,10 +97,10 @@ const About: React.FC = () => {
 
             <div className="space-y-4 text-secondary-700">
               At Pureways Logistics, we don't just deliver parcels — we deliver trust, speed, and reliability to every doorstep. As a specialist courier firm operating within the logistics network of one of the world's largest online retailers, our mission is clear: ensure that every delivery is timely, safe, and handled with care. <br /> <br />
-              Rooted in our local communities, Pureways Logistics is proud to be more than a logistics company. We are a people-powered business — one that values diversity, inclusivity, and the strength of local engagement. By hiring local drivers and investing in local talent, we've built an agile team that reflects the neighbourhoods we serve and drives our commitment to excellence. <br /> <br /> 
-              Our workforce is at the heart of our success. From dedicated drivers to the support staff behind the scenes, each team member plays a vital role in upholding our Principles. We are unwavering in our commitment to creating a safe, supportive, and fulfilling workspace for every employee — because when our team thrives, so do our customers. <br /> <br /> 
-              At Pureways, customer satisfaction isn't an objective — it's a promise. Every interaction, every delivery, and every mile we cover is designed to create a seamless and positive experience for our customers. <br /> <br />    
-              With Pureways Logistics, you're not just choosing a courier firm. You're choosing a committed, community-focused, and principles-driven partner in logistics. Let's deliver the future — together.
+              Rooted in our local communities, Pureways Logistics is proud to be more than a logistics company. We are a people-led business — one that values diversity, inclusivity, and the strength of local engagement. By recruiting local drivers and investing in local talent, we've built an agile team that reflects the neighbourhoods we serve and drives our commitment to excellence. <br /> <br /> 
+              Our workforce is at the heart of our success. From dedicated drivers to the support staff behind the scenes, each team member plays a crucial role in upholding our Principles. We are unwavering in our commitment to creating a safe, supportive, and fulfilling workspace for every employee — because when our team flourishes, so do our customers. <br /> <br /> 
+              At Pureways, customers' satisfaction isn't an objective — it's a commitment. Every engagement, every delivery, and every kilometre we cover is designed to create a smooth and positive experience for our customers. <br /> <br />    
+              With Pureways Logistics, you're not just choosing a courier firm. You're choosing a committed, community-focused, and principles-driven partner in logistics. Together let's shape the future of delivery.
 
             </div>
           </motion.div>
@@ -140,7 +140,7 @@ const About: React.FC = () => {
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 text-primary-600">Our Mission</h3>
               <p className="text-secondary-700 leading-relaxed">
-              To redefine last-mile delivery by combining technology, teamwork, and trust. We aim to provide fast, dependable, and customer-centric courier firm while empowering local communities through job creation and inclusivity.
+              To transform final-mile delivery by combining innovation, collaboration, and trust. We aim to provide quick, reliable, and client-focused courier firm while empowering local communities through employment opportunities and inclusivity.
 
               </p>
             </div>
@@ -161,7 +161,7 @@ const About: React.FC = () => {
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 text-accent-500">Our Vision</h3>
               <p className="text-secondary-700 leading-relaxed">
-              To be the most respected and community-rooted courier firm in the industry — known for our reliability, our people, and our unwavering commitment to delivering excellence every day.
+              To be the most respected and community-embedded courier firm in the sector — known for our reliability, our people, and our unwavering commitment to achieving excellence every day.
 
               </p>
             </div>
@@ -202,10 +202,10 @@ const About: React.FC = () => {
 
             <div className="space-y-4 text-secondary-700">
               <p>
-                Our workforce is at the heart of our success. From dedicated drivers to the support staff behind the scenes, each team member plays a vital role in upholding our principles. We are unwavering in our commitment to creating a safe, supportive, and fulfilling workspace for every employee — because when our team thrives, so do our customers.
+                Our workforce is at the heart of our success. From dedicated drivers to the support staff behind the scenes, each team member plays a crucial role in upholding our principles. We are unwavering in our commitment to creating a safe, supportive, and fulfilling workspace for every employee — because when our team flourishes, so do our customers.
               </p>
               <p>
-                At Pureways, customer satisfaction isn't an objective — it's a promise. Every interaction, every delivery, and every mile we cover is designed to create a seamless and positive experience for our customers.
+                At Pureways, customer satisfaction isn't an objective — it's a commitment. Every engagement, every delivery, and every kilometre we cover is designed to create a smooth and positive experience for our customers.
               </p>
             </div>
           </motion.div>
@@ -216,7 +216,7 @@ const About: React.FC = () => {
       <Section bgColor="bg-secondary-50">
         <SectionTitle
           title="Our Core Principles"
-          subtitle="The principles that guide everything we do at Pureways."
+          subtitle="The principles that guide all that we do at Pureways."
           centered
         />
 
@@ -250,7 +250,7 @@ const About: React.FC = () => {
             >
               <h3 className="text-3xl font-bold mb-5 text-primary-700">Diversity | Equity | Inclusivity</h3>
               <p className="text-secondary-700 text-lg">
-              At Pureways Logistics, our team is a reflection of the communities we serve. We celebrate diversity and champion inclusivity by hiring from all walks of life and providing equal opportunities for growth, development, and success.
+              At Pureways Logistics, our team reflects the communities we serve. We celebrate diversity and champion inclusivity by recruiting from all walks of life and offering equal opportunities for growth, development, and success.
 
               </p>
             </motion.div>

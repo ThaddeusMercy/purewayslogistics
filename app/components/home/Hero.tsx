@@ -107,7 +107,7 @@ const Hero = () => {
                 We Make Every Delivery Count.
               </motion.h1>
               <p className="text-white/80 text-sm md:text-lg lg:text-lg w-full sm:w-4/5 md:w-2/4 mx-auto py-2 sm:py-4">
-               We deliver trust, speed, and reliability. As a Delivery Service Partner (DSP), we specialise in providing safe, efficient, and customer-focused last-mile delivery solutions.
+               We deliver trust, speed, and reliability. As a Delivery Service Partner (DSP), we specialise in providing safe, efficient, and client-focused final-mile delivery solutions.
 
                
               </p>

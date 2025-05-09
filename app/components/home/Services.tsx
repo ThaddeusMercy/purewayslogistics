@@ -27,7 +27,7 @@ const Services: React.FC = () => {
               <div className="bg-white p-6 md:p-8 lg:p-12 rounded-lg shadow-2xl border border-transparent h-auto lg:h-[550px] flex flex-col"> 
                 <div className="space-y-4 md:space-y-6">
                   <h3 className="text-3xl md:text-4xl font-bold text-gray-900">Last-Mile Delivery</h3>
-                  <p className="text-sm md:text-base text-gray-700">We deliver parcels safely and efficiently to our partner's customers' doorsteps. Our trained and professional Delivery Associates ensure that every parcel reaches its destination on time, every time — with care and precision.</p>
+                  <p className="text-sm md:text-base text-gray-700">We deliver parcels safely and efficiently to our partners' customers' doorsteps. Our trained and professional Delivery Associates ensure that every parcel reaches its destination on time, every time — with care and precision.</p>
                   <div className="">
                     <div className="grid grid-cols-1 gap-4 md:gap-6 mt-6 md:mt-12">
                       <div className="flex items-center gap-3">
@@ -96,7 +96,7 @@ const Services: React.FC = () => {
               <div className="bg-white p-6 md:p-8 lg:p-12 rounded-lg shadow-2xl border border-transparent h-auto lg:h-[550px] flex flex-col">
                 <div className="space-y-4 md:space-y-6">
                   <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3 md:mb-4">Excellent Customer Support</h3>
-                  <p className="text-sm md:text-base text-gray-700">Our customer-centric approach ensures you receive exceptional support throughout your logistics journey with us.</p>
+                  <p className="text-sm md:text-base text-gray-700">Our client-focused approach ensures you receive exceptional support throughout your logistics journey with us.</p>
                   <div className="">
                     <div className="grid grid-cols-1 gap-4 md:gap-6 mt-6 md:mt-12">
                       <div className="flex items-center gap-3">
@@ -135,7 +135,7 @@ const Services: React.FC = () => {
               <div className="bg-white p-6 md:p-8 lg:p-12 rounded-lg shadow-2xl border border-transparent h-auto lg:h-[550px] flex flex-col"> 
                 <div className="space-y-4 md:space-y-6">
                   <h3 className="text-3xl md:text-4xl font-bold text-gray-900">Safety-First Operations</h3>
-                  <p className="text-sm md:text-base text-gray-700">Safety is at the heart of what we do. We provide extensive training to all Delivery Associates, promoting safe driving practices and secure handling of parcels.</p>
+                  <p className="text-sm md:text-base text-gray-700">Safety is at the heart of what we do. We provide comprehensive training to all Delivery Associates, promoting safe driving practices and secure handling of parcels.</p>
                   <div className="">
                     <div className="grid grid-cols-1 gap-4 md:gap-6 mt-6 md:mt-12">
                       <div className="flex items-center gap-3">

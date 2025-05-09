@@ -32,7 +32,7 @@ const AboutSection: React.FC = () => {
                 Pureways Logistics is specialist courier firm operating within the logistics network of one of the world's largest online retailers, our mission is clear: ensure that every delivery is timely, safe, and handled with care.
                 </p>
                 <p>
-                With Pureways Logistics, you're not just choosing a courier firm. You're choosing a committed, community-focused, and principles-driven partner in logistics. Let's deliver the future — together.
+                With Pureways Logistics, you're not just choosing a courier firm. You're choosing a committed, people-led, and principles-driven partner in logistics. Together let's shape the future of delivery.
                 </p>
               </div>
               

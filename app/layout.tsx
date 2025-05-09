@@ -13,20 +13,20 @@ const InterSans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Pureway Logistics - Your Strategic Solution for Logistics and Cybersecurity",
-  description: "Pureway Logistics provides integrated solutions for logistics and cybersecurity needs, helping your business operate efficiently and securely.",
-  keywords: "logistics, cybersecurity, pureway logistics, business solutions, logistics management, cybersecurity services, business efficiency, business security",
+  title: "Pureways Logistics - Fast & Reliable Delivery Services",
+  description: "Pureways Logistics provides efficient and reliable delivery services to meet all your shipping needs, helping your business deliver on time, every time.",
+  keywords: "delivery service, logistics, pureways logistics, shipping solutions, package delivery, delivery service, prompt delivery, reliable logistics, final mile delivery",
   openGraph: {
-    title: "Pureway Logistics - Your Strategic Solution for Logistics and Cybersecurity",
-    description: "Pureway Logistics provides integrated solutions for logistics and cybersecurity needs, helping your business operate efficiently and securely.",
-    url: process.env.URL || "https://pureway-logistics.co.uk",
-    siteName: "Pureway Logistics",
+    title: "Pureways Logistics - Fast & Reliable Delivery Services",
+    description: "Pureways Logistics provides efficient and reliable delivery services to meet all your shipping needs, helping your business deliver on time, every time.",
+    url: process.env.URL || "https://www.purewayslogistics.co.uk",
+    siteName: "Pureways Logistics",
     images: [
       {
         url: "/images/pureway-og-image.png",
         width: 1200,
         height: 630,
-        alt: "Pureway Logistics - Your Strategic Solution for Logistics and Cybersecurity",
+        alt: "Pureways Logistics - Fast & Reliable Delivery Services",
       }
     ]
   }

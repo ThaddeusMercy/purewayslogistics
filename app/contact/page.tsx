@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
     {
       icon: <Clock size={24} />,
       title: "Business Hours",
-      details: ["Monday-Sunday: 9:00 AM - 6:00 PM"]
+      details: ["Monday-Sunday: 9:00am - 6:00pm"]
     }
   ];
 
@@ -206,7 +206,7 @@ const Contact: React.FC = () => {
                   required
                   rows={5}
                   className="w-full px-4 py-3 rounded-lg border border-secondary-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
-                  placeholder="Please provide details about your courier service needs..."
+                  placeholder="Please provide details about your delivery service needs..."
                 ></textarea>
               </div>
               

@@ -20,37 +20,37 @@ const CourierServices: React.FC = () => {
     {
       icon: <Truck size={24} />,
       title: "Last-Mile Delivery",
-      description: "We deliver parcels safely and efficiently to our partner's customers' doorsteps. Our trained and professional Delivery Associates ensure that every parcel reaches its destination on time, every time — with care and precision."
+      description: "We deliver parcels safely and efficiently to our partners' customers' doorsteps. Our trained and professional Delivery Associates ensure that every parcel reaches its destination on time, every time — with care and precision."
     },
     {
       icon: <Route size={24} />,
       title: "Route Management & Optimization",
-      description: "We expertly manage and optimize delivery routes, ensuring maximum efficiency while meeting our clients service and timing expectations."
+      description: "We expertly manage and optimize delivery routes, ensuring maximum efficiency while meeting our clients' service and timely expectations"
     },
     {
       icon: <Shield size={24} />,
       title: "Safety-First Operations",
-      description: "Safety is at the heart of what we do. We provide extensive training to all Delivery Associates, promoting safe driving practices and secure handling of parcels."
+      description: "Safety is at the heart of what we do. We provide comprehensive training to all Delivery Associates, promoting safe driving practices and secure handling of parcels."
     },
     {
       icon: <Users size={24} />,
       title: "Recruitment & Training",
-      description: "We actively recruit from local communities and deliver comprehensive onboarding and continuous training to ensure excellence in service."
+      description: "We actively recruit from local communities and deliver comprehensive onboarding and ongoing training to ensure excellence in service."
     },
     {
       icon: <Box size={24} />,
       title: "Parcel Handling and Customer Service",
-      description: "Our team not only ensures fast delivery but also takes pride in providing exceptional customer service. Every parcel is treated with respect and care, and every interaction is conducted professionally to enhance customer satisfaction."
+      description: "Our team not only ensures prompt delivery but also takes pride in providing exceptional customer service. Every parcel is treated with respect and care, and every engagement is conducted professionally to enhance customer satisfaction."
     },
     {
       icon: <LineChart size={24} />,
       title: "Performance Monitoring & Continuous Improvement",
-      description: "We track our performance and always look for ways to improve. Through ongoing coaching and feedback, we consistently raise the bar on quality, speed, and reliability."
+      description: "We track our performance and continually seek ways to improve. Through ongoing coaching and feedback, we consistently raise the bar on quality, speed, and reliability."
     },
     {
       icon: <Car size={24} />,
       title: "Vehicle Fleet Management",
-      description: "We manage and maintain a fleet of high-quality delivery vehicles to support our operations. Vehicles are routinely serviced to ensure they are roadworthy, reliable, and meet our partners strict delivery standards."
+      description: "We manage and maintain a fleet of high-quality delivery vehicles to support our operations. Vehicles are regularly serviced to ensure they are roadworthy, reliable, and meet our partners' strict delivery standards."
     }
   ];
 
@@ -65,7 +65,7 @@ const CourierServices: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <Image 
             src={brandedsorabus} 
-            alt="Courier Service Background" 
+            alt="Delivery Service Background" 
             className="w-full h-full object-cover object-[center_20%]"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-secondary-900/80 to-secondary-900/60"></div>
@@ -81,7 +81,7 @@ const CourierServices: React.FC = () => {
               Courier Excellence
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 px-2 sm:px-0">
-              At Pureways Logistics, we specialise in providing high-quality delivery services that keep our clients/partners promises to its customers. As a trusted Delivery Service Partner (DSP), we deliver more than just parcels — we deliver speed, safety, and satisfaction.
+              At Pureways Logistics, we specialise in providing high-quality delivery services that keep our clients' and partners' promises to their customers. As a trusted Delivery Service Partner (DSP), we deliver more than just parcels — we deliver speed, safety, and satisfaction.
             </p>
             <div className="flex justify-center">
               <Link href="/contact" className="btn-primary bg-orange-500 hover:bg-orange-600 w-full max-w-[180px] px-4 py-2 text-base rounded-md">
@@ -115,7 +115,7 @@ const CourierServices: React.FC = () => {
               <div className="inline-flex items-center justify-center p-2 sm:p-3 rounded-lg bg-primary-50 text-accent-500 mb-3 sm:mb-4">
                 {service.icon}
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-2">{service.title}</h3>
+              <h3 className="text-xl md:text-2xl font-semibold mb-2 text-gray-800">{service.title}</h3>
               <p className="text-secondary-600 text-base md:text-lg">{service.description}</p>
             </motion.div>
           ))}
@@ -135,7 +135,7 @@ const CourierServices: React.FC = () => {
                 {
                   number: "01",
                   title: "100% Customer-Focused",
-                  description: "We prioritize your needs and satisfaction in everything we do."
+                  description: "We prioritise your needs and satisfaction in everything we do."
                 },
                 {
                   number: "02",
@@ -172,7 +172,7 @@ const CourierServices: React.FC = () => {
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-2">{step.title}</h4>
+                    <h4 className="text-lg font-semibold mb-2 text-gray-800">{step.title}</h4>
                     <p className="text-secondary-600">{step.description}</p>
                   </div>
                 </motion.div>
@@ -189,7 +189,7 @@ const CourierServices: React.FC = () => {
             <div className="rounded-xl overflow-hidden shadow-lg">
               <Image 
                 src={verticalmanbw} 
-                alt="Courier Service" 
+                alt="Delivery Service" 
                 className="w-full h-auto"
               />
             </div>

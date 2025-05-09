@@ -217,7 +217,7 @@ export default function PrivacyPolicyPage() {
                   Service or from the Service infrastructure itself (for example, the duration of a page visit).
                 </li>
                 <li>
-                  <strong>Website</strong> refers to Pureways Logistics LTD, accessible from <a href="https://pureway-logistics.co.uk/" className="text-blue-600 hover:underline">https://pureway-logistics.co.uk/</a>
+                  <strong>Website</strong> refers to Pureways Logistics LTD, accessible from <a href="https://www.purewayslogistics.co.uk/" className="text-blue-600 hover:underline">https://www.purewayslogistics.co.uk/</a>
                 </li>
                 <li>
                   <strong>You</strong> means the individual accessing or using the Service, or the company, or other
@@ -556,8 +556,8 @@ export default function PrivacyPolicyPage() {
               <p>If you have any questions about this Privacy Policy, You can contact us:</p>
               <p>
                 By visiting this page on our website:{' '}
-                <a href="https://pureway-logistics.co.uk/" className="text-blue-600 hover:underline">
-                  https://pureway-logistics.co.uk/
+                <a href="https://www.purewayslogistics.co.uk/" className="text-blue-600 hover:underline">
+                https://www.purewayslogistics.co.uk/
                 </a>
               </p>
             </section>

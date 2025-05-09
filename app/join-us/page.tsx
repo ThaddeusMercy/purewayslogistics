@@ -49,7 +49,7 @@ const Careers: React.FC = () => {
 
   const requirements = [
     "Motivated and reliable drivers with a passion for service",
-    "Valid driver's license (UK or EU issued)",
+    "Valid driver's licence (UK or EU issued)",
     "Community-minded individuals ready to represent Pureways with pride"
   ];
 
@@ -78,7 +78,7 @@ const Careers: React.FC = () => {
             className="max-w-3xl mx-auto text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              We Are Hiring Now!
+              We Are Recruiting Now!
             </h1>
             <p className="text-xl text-white/90 mb-4">
               At Pureways Logistics, we're growing — and we're looking for motivated, reliable individuals to join our team of Delivery Associates!
@@ -143,7 +143,7 @@ const Careers: React.FC = () => {
               className="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm"
             >
               <Clock size={24} className="text-accent-500" />
-              <span className="text-lg font-medium">Flexible working hours</span>
+              <span className="text-lg font-medium text-gray-800">Flexible working hours</span>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -153,7 +153,7 @@ const Careers: React.FC = () => {
               className="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm"
             >
               <PoundSterling size={24} className="text-accent-500" />
-              <span className="text-lg font-medium">Opportunity to maximise earnings</span>
+              <span className="text-lg font-medium text-gray-800">Opportunity to maximise earnings</span>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -163,7 +163,7 @@ const Careers: React.FC = () => {
               className="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm"
             >
               <Users size={24} className="text-accent-500" />
-              <span className="text-lg font-medium">Be your own boss</span>
+              <span className="text-lg font-medium text-gray-800">Be your own boss</span>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -173,7 +173,7 @@ const Careers: React.FC = () => {
               className="flex items-center gap-4 p-4 bg-white rounded-lg shadow-sm"
             >
               <Home size={24} className="text-accent-500" />
-              <span className="text-lg font-medium">Work close to home</span>
+              <span className="text-lg font-medium text-gray-800">Work close to home</span>
             </motion.div>
           </div>
           <motion.div
@@ -217,7 +217,7 @@ const Careers: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
+                <h3 className="text-lg font-semibold mb-2 text-gray-800">{benefit.title}</h3>
                 <p className="text-secondary-600">{benefit.description}</p>
               </div>
             </motion.div>
@@ -298,7 +298,7 @@ const Careers: React.FC = () => {
             >
               <h3 className="text-2xl font-bold text-secondary-900 mb-4">100% Customer-Focused</h3>
               <p className="text-secondary-700">
-                We prioritise the needs and expectations of our customer in everything we do.
+                We prioritise the needs and expectations of our customers in everything we do.
               </p>
             </motion.div>
 
