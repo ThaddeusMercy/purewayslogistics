@@ -248,7 +248,7 @@ const Contact: React.FC = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                    <h3 className="text-lg font-semibold mb-2 text-gray-700">{item.title}</h3>
                     {item.details.map((detail, i) => (
                       <p key={i} className="text-secondary-700">
                         {item.title === "Phone Numbers" ? (
