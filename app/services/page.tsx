@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import Link from 'next/link';
 import Section from '../components/ui/Section';
 import SectionTitle from '../components/ui/SectionTitle';
-import { Box, LineChart, Car, Truck, Route, Shield, Users } from 'lucide-react';
+import { Box, Car, Truck, Route, Shield, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import brandedsorabus from '@/public/images/brandedsorabus.png';
@@ -24,8 +24,8 @@ const CourierServices: React.FC = () => {
     },
     {
       icon: <Route size={24} />,
-      title: "Route Management & Optimization",
-      description: "We expertly manage and optimize delivery routes, ensuring maximum efficiency while meeting our clients' service and timely expectations"
+      title: "Excellent Customer Support",
+      description: "Our client-focused approach ensures you receive exceptional support throughout your logistics journey with us. We keep you in the loop and ensure you are always updated and easy to reach."
     },
     {
       icon: <Shield size={24} />,
@@ -41,11 +41,6 @@ const CourierServices: React.FC = () => {
       icon: <Box size={24} />,
       title: "Parcel Handling and Customer Service",
       description: "Our team not only ensures prompt delivery but also takes pride in providing exceptional customer service. Every parcel is treated with respect and care, and every engagement is conducted professionally to enhance customer satisfaction."
-    },
-    {
-      icon: <LineChart size={24} />,
-      title: "Performance Monitoring & Continuous Improvement",
-      description: "We track our performance and continually seek ways to improve. Through ongoing coaching and feedback, we consistently raise the bar on quality, speed, and reliability."
     },
     {
       icon: <Car size={24} />,
