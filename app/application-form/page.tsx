@@ -1,32 +1,35 @@
 "use client";
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useRouter } from 'next/navigation';
-import { ArrowLeft, X } from 'lucide-react';
-import Section from '../components/ui/Section';
-import SectionTitle from '../components/ui/SectionTitle';
-import Image from 'next/image';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+import { ArrowLeft, X } from "lucide-react";
+import Section from "../components/ui/Section";
+import SectionTitle from "../components/ui/SectionTitle";
+import Image from "next/image";
 
 const ApplicationForm: React.FC = () => {
   const router = useRouter();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [fileName, setFileName] = useState<string>('');
-  const [previewUrl, setPreviewUrl] = useState<string>('');
+  const [fileName, setFileName] = useState<string>("");
+  const [previewUrl, setPreviewUrl] = useState<string>("");
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    drivingLicence: '',
-    experience: '',
-    selfEmployed: '',
-    workEligibility: '',
-    startDate: '',
-    additionalInfo: '',
-    termsAccepted: false
+    fullName: "",
+    email: "",
+    phone: "",
+    drivingLicence: "",
+    experience: "",
+    selfEmployed: "",
+    workEligibility: "",
+    startDate: "",
+    additionalInfo: "",
+    termsAccepted: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error', message: string } | null>(null);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files[0]) {
@@ -34,13 +37,13 @@ const ApplicationForm: React.FC = () => {
       setSelectedFile(file);
       setFileName(file.name);
 
-      if (file.type === 'application/pdf') {
+      if (file.type === "application/pdf") {
         const reader = new FileReader();
         reader.onload = (e) => {
           setPreviewUrl(e.target?.result as string);
         };
         reader.readAsDataURL(file);
-      } else if (file.type.startsWith('image/')) {
+      } else if (file.type.startsWith("image/")) {
         setPreviewUrl(URL.createObjectURL(file));
       }
     }
@@ -48,21 +51,23 @@ const ApplicationForm: React.FC = () => {
 
   const removeFile = () => {
     setSelectedFile(null);
-    setFileName('');
-    setPreviewUrl('');
-    if (previewUrl.startsWith('blob:')) {
+    setFileName("");
+    setPreviewUrl("");
+    if (previewUrl.startsWith("blob:")) {
       URL.revokeObjectURL(previewUrl);
     }
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    const isCheckbox = (e.target as HTMLInputElement).type === 'checkbox';
+    const isCheckbox = (e.target as HTMLInputElement).type === "checkbox";
     const checked = isCheckbox ? (e.target as HTMLInputElement).checked : false;
-    
-    setFormData(prev => ({
+
+    setFormData((prev) => ({
       ...prev,
-      [name]: isCheckbox ? checked : value
+      [name]: isCheckbox ? checked : value,
     }));
   };
 
@@ -74,22 +79,22 @@ const ApplicationForm: React.FC = () => {
     try {
       // Create form data object to handle file upload
       const submitData = new FormData();
-      
+
       // Add all form fields
       Object.entries(formData).forEach(([key, value]) => {
         // Convert boolean to string for FormData
-        const formValue = typeof value === 'boolean' ? String(value) : value;
+        const formValue = typeof value === "boolean" ? String(value) : value;
         submitData.append(key, formValue);
       });
-      
+
       // Add CV file if selected
       if (selectedFile) {
-        submitData.append('cv', selectedFile);
+        submitData.append("cv", selectedFile);
       }
 
       // Send the form data with the file
-      const response = await fetch('/api/send-form', {
-        method: 'POST',
+      const response = await fetch("/api/send-form", {
+        method: "POST",
         body: submitData, // Using FormData to include the file
         // Don't set Content-Type header - browser will set it with boundary for multipart/form-data
       });
@@ -98,36 +103,38 @@ const ApplicationForm: React.FC = () => {
 
       if (response.ok) {
         setSubmitStatus({
-          type: 'success',
-          message: 'Your application has been submitted successfully! We will contact you soon.'
+          type: "success",
+          message:
+            "Your application has been submitted successfully! We will contact you soon.",
         });
         // Reset form
         setFormData({
-          fullName: '',
-          email: '',
-          phone: '',
-          drivingLicence: '',
-          experience: '',
-          selfEmployed: '',
-          workEligibility: '',
-          startDate: '',
-          additionalInfo: '',
-          termsAccepted: false
+          fullName: "",
+          email: "",
+          phone: "",
+          drivingLicence: "",
+          experience: "",
+          selfEmployed: "",
+          workEligibility: "",
+          startDate: "",
+          additionalInfo: "",
+          termsAccepted: false,
         });
         setSelectedFile(null);
-        setFileName('');
-        setPreviewUrl('');
+        setFileName("");
+        setPreviewUrl("");
       } else {
         setSubmitStatus({
-          type: 'error',
-          message: data.error || 'Failed to submit application. Please try again.'
+          type: "error",
+          message:
+            data.error || "Failed to submit application. Please try again.",
         });
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error("Error submitting form:", error);
       setSubmitStatus({
-        type: 'error',
-        message: 'An unexpected error occurred. Please try again later.'
+        type: "error",
+        message: "An unexpected error occurred. Please try again later.",
       });
     } finally {
       setIsSubmitting(false);
@@ -156,14 +163,18 @@ const ApplicationForm: React.FC = () => {
             subtitle="Self-Employed Delivery Driver Application Form"
             centered
           />
-          
+
           <p className="text-center text-secondary-700 mb-8">
-            Interested in working with Pureways Logistics as a self-employed delivery driver? Fill out the form below and we'll be in touch!
+            Interested in working with Pureways Logistics as a self-employed
+            delivery driver? Fill out the form below and we'll be in touch!
           </p>
 
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="fullName" className="block text-sm font-medium text-secondary-700 mb-1">
+              <label
+                htmlFor="fullName"
+                className="block text-sm font-medium text-secondary-700 mb-1"
+              >
                 Full Name <span className="text-red-500">*</span>
               </label>
               <input
@@ -178,7 +189,10 @@ const ApplicationForm: React.FC = () => {
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-secondary-700 mb-1">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-secondary-700 mb-1"
+              >
                 Email Address <span className="text-red-500">*</span>
               </label>
               <input
@@ -193,7 +207,10 @@ const ApplicationForm: React.FC = () => {
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-secondary-700 mb-1">
+              <label
+                htmlFor="phone"
+                className="block text-sm font-medium text-secondary-700 mb-1"
+              >
                 Phone Number <span className="text-red-500">*</span>
               </label>
               <input
@@ -209,30 +226,31 @@ const ApplicationForm: React.FC = () => {
 
             <div>
               <label className="block text-sm font-medium text-secondary-700 mb-1">
-                Do you hold a full, valid UK/EU driving licence? <span className="text-red-500">*</span>
+                Do you hold a full, valid UK/EU driving licence?{" "}
+                <span className="text-red-500">*</span>
               </label>
               <div className="space-x-4">
                 <label className="inline-flex items-center">
-                  <input 
-                  type="radio" 
-                  name="drivingLicence" 
-                  value="yes" 
-                  required 
-                  checked={formData.drivingLicence === 'yes'}
-                  onChange={handleInputChange}
-                  className="mr-2" 
-                />
+                  <input
+                    type="radio"
+                    name="drivingLicence"
+                    value="yes"
+                    required
+                    checked={formData.drivingLicence === "yes"}
+                    onChange={handleInputChange}
+                    className="mr-2"
+                  />
                   Yes
                 </label>
                 <label className="inline-flex items-center">
-                  <input 
-                    type="radio" 
-                    name="drivingLicence" 
-                    value="no" 
-                    required 
-                    checked={formData.drivingLicence === 'no'}
+                  <input
+                    type="radio"
+                    name="drivingLicence"
+                    value="no"
+                    required
+                    checked={formData.drivingLicence === "no"}
                     onChange={handleInputChange}
-                    className="mr-2" 
+                    className="mr-2"
                   />
                   No
                 </label>
@@ -241,30 +259,31 @@ const ApplicationForm: React.FC = () => {
 
             <div>
               <label className="block text-sm font-medium text-secondary-700 mb-1">
-                Do you have previous delivery driving experience? <span className="text-red-500">*</span>
+                Do you have previous delivery driving experience?{" "}
+                <span className="text-red-500">*</span>
               </label>
               <div className="space-x-4">
                 <label className="inline-flex items-center">
-                  <input 
-                  type="radio" 
-                  name="experience" 
-                  value="yes" 
-                  required 
-                  checked={formData.experience === 'yes'}
-                  onChange={handleInputChange}
-                  className="mr-2" 
-                />
+                  <input
+                    type="radio"
+                    name="experience"
+                    value="yes"
+                    required
+                    checked={formData.experience === "yes"}
+                    onChange={handleInputChange}
+                    className="mr-2"
+                  />
                   Yes
                 </label>
                 <label className="inline-flex items-center">
-                  <input 
-                    type="radio" 
-                    name="experience" 
-                    value="no" 
-                    required 
-                    checked={formData.experience === 'no'}
+                  <input
+                    type="radio"
+                    name="experience"
+                    value="no"
+                    required
+                    checked={formData.experience === "no"}
                     onChange={handleInputChange}
-                    className="mr-2" 
+                    className="mr-2"
                   />
                   No
                 </label>
@@ -273,30 +292,31 @@ const ApplicationForm: React.FC = () => {
 
             <div>
               <label className="block text-sm font-medium text-secondary-700 mb-1">
-                Are you currently self-employed? <span className="text-red-500">*</span>
+                Are you currently self-employed?{" "}
+                <span className="text-red-500">*</span>
               </label>
               <div className="space-x-4">
                 <label className="inline-flex items-center">
-                  <input 
-                  type="radio" 
-                  name="selfEmployed" 
-                  value="yes" 
-                  required 
-                  checked={formData.selfEmployed === 'yes'}
-                  onChange={handleInputChange}
-                  className="mr-2" 
-                />
+                  <input
+                    type="radio"
+                    name="selfEmployed"
+                    value="yes"
+                    required
+                    checked={formData.selfEmployed === "yes"}
+                    onChange={handleInputChange}
+                    className="mr-2"
+                  />
                   Yes
                 </label>
                 <label className="inline-flex items-center">
-                  <input 
-                    type="radio" 
-                    name="selfEmployed" 
-                    value="no" 
-                    required 
-                    checked={formData.selfEmployed === 'no'}
+                  <input
+                    type="radio"
+                    name="selfEmployed"
+                    value="no"
+                    required
+                    checked={formData.selfEmployed === "no"}
                     onChange={handleInputChange}
-                    className="mr-2" 
+                    className="mr-2"
                   />
                   No
                 </label>
@@ -305,30 +325,31 @@ const ApplicationForm: React.FC = () => {
 
             <div>
               <label className="block text-sm font-medium text-secondary-700 mb-1">
-                Are you eligible to work in the UK? <span className="text-red-500">*</span>
+                Are you eligible to work in the UK?{" "}
+                <span className="text-red-500">*</span>
               </label>
               <div className="space-x-4">
                 <label className="inline-flex items-center">
-                  <input 
-                  type="radio" 
-                  name="workEligibility" 
-                  value="yes" 
-                  required 
-                  checked={formData.workEligibility === 'yes'}
-                  onChange={handleInputChange}
-                  className="mr-2" 
-                />
+                  <input
+                    type="radio"
+                    name="workEligibility"
+                    value="yes"
+                    required
+                    checked={formData.workEligibility === "yes"}
+                    onChange={handleInputChange}
+                    className="mr-2"
+                  />
                   Yes
                 </label>
                 <label className="inline-flex items-center">
-                  <input 
-                    type="radio" 
-                    name="workEligibility" 
-                    value="no" 
-                    required 
-                    checked={formData.workEligibility === 'no'}
+                  <input
+                    type="radio"
+                    name="workEligibility"
+                    value="no"
+                    required
+                    checked={formData.workEligibility === "no"}
                     onChange={handleInputChange}
-                    className="mr-2" 
+                    className="mr-2"
                   />
                   No
                 </label>
@@ -336,7 +357,10 @@ const ApplicationForm: React.FC = () => {
             </div>
 
             <div>
-              <label htmlFor="startDate" className="block text-sm font-medium text-secondary-700 mb-1">
+              <label
+                htmlFor="startDate"
+                className="block text-sm font-medium text-secondary-700 mb-1"
+              >
                 Available start date <span className="text-red-500">*</span>
               </label>
               <input
@@ -351,14 +375,17 @@ const ApplicationForm: React.FC = () => {
             </div>
 
             <div>
-              <label htmlFor="cv" className="block text-sm font-medium text-secondary-700 mb-1">
+              <label
+                htmlFor="cv"
+                className="block text-sm font-medium text-secondary-700 mb-1"
+              >
                 Upload CV (PDF or Image) <span className="text-red-500">*</span>
               </label>
               <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
                 <div className="space-y-1 text-center">
                   {previewUrl ? (
                     <div className="relative">
-                      {selectedFile?.type === 'application/pdf' ? (
+                      {selectedFile?.type === "application/pdf" ? (
                         <iframe
                           src={previewUrl}
                           className="w-full h-96 border rounded-md"
@@ -368,6 +395,8 @@ const ApplicationForm: React.FC = () => {
                         <Image
                           src={previewUrl}
                           alt="Preview"
+                          width="100"
+                          height="100"
                           className="max-h-96 w-auto mx-auto rounded-md"
                         />
                       )}
@@ -428,7 +457,10 @@ const ApplicationForm: React.FC = () => {
             </div>
 
             <div>
-              <label htmlFor="additionalInfo" className="block text-sm font-medium text-secondary-700 mb-1">
+              <label
+                htmlFor="additionalInfo"
+                className="block text-sm font-medium text-secondary-700 mb-1"
+              >
                 Additional Information
               </label>
               <textarea
@@ -451,18 +483,38 @@ const ApplicationForm: React.FC = () => {
                   checked={formData.termsAccepted}
                   onChange={handleInputChange}
                   className="w-4 h-4 border border-gray-300 rounded appearance-none checked:bg-[#FF6B00] checked:border-[#FF6B00] focus:ring-2 focus:ring-[#FF6B00] relative"
-                  style={{ backgroundImage: formData.termsAccepted ? "url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox=%270 0 16 16%27 fill=%27white%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3E%3C/svg%3E')" : "", backgroundSize: "100% 100%", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}
+                  style={{
+                    backgroundImage: formData.termsAccepted
+                      ? "url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox=%270 0 16 16%27 fill=%27white%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3E%3C/svg%3E')"
+                      : "",
+                    backgroundSize: "100% 100%",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
                 />
               </div>
               <div className="ml-3 text-sm">
-                <label htmlFor="termsAccepted" className="font-medium text-secondary-700">
-                  I have read the <a href="/terms" target="_blank" className="text-[#FF6B00] hover:underline">terms and conditions</a> and agree to it. <span className="text-red-500">*</span>
+                <label
+                  htmlFor="termsAccepted"
+                  className="font-medium text-secondary-700"
+                >
+                  I have read the{" "}
+                  <a
+                    href="/terms"
+                    target="_blank"
+                    className="text-[#FF6B00] hover:underline"
+                  >
+                    terms and conditions
+                  </a>{" "}
+                  and agree to it. <span className="text-red-500">*</span>
                 </label>
               </div>
             </div>
 
             {submitStatus && (
-              <div className={`p-4 rounded-md ${submitStatus.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+              <div
+                className={`p-4 rounded-md ${submitStatus.type === "success" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}
+              >
                 {submitStatus.message}
               </div>
             )}
@@ -471,9 +523,9 @@ const ApplicationForm: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`bg-[#FF6B00] px-8 py-3 rounded-lg text-white font-bold transition-colors ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-[#e05e00]'}`}
+                className={`bg-[#FF6B00] px-8 py-3 rounded-lg text-white font-bold transition-colors ${isSubmitting ? "opacity-70 cursor-not-allowed" : "hover:bg-[#e05e00]"}`}
               >
-                {isSubmitting ? 'Submitting...' : 'Submit Application'}
+                {isSubmitting ? "Submitting..." : "Submit Application"}
               </button>
             </div>
           </form>
