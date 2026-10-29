@@ -1,66 +1,47 @@
-import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
-
-// Configure nodemailer with Gmail SMTP
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASSWORD,
-  },
-  secure: true,
-});
+import { NextRequest, NextResponse } from 'next/server';
+import { escapeHtml, sendOfficeEmail } from '@/lib/mail';
 
 export async function POST(request: NextRequest) {
   try {
-    // Get form data
-    const data = await request.json();
+    const body = await request.json();
+    const name = String(body.name ?? '').trim();
+    const email = String(body.email ?? '').trim();
+    const phone = String(body.phone ?? '').trim();
+    const company = String(body.company ?? '').trim();
+    const subject = String(body.subject ?? '').trim();
+    const message = String(body.message ?? '').trim();
 
-    // Validate required fields
-    const requiredFields = ["name", "email", "subject", "message"];
-    for (const field of requiredFields) {
-      if (!data[field]) {
-        return NextResponse.json(
-          { error: `${field} is required` },
-          { status: 400 },
-        );
-      }
+    if (!name || !email || !subject || !message) {
+      return NextResponse.json(
+        { error: 'Name, email, subject, and message are required' },
+        { status: 400 }
+      );
     }
 
-    // Format the email content
-    const emailContent = `
-      <h1>📬 New Contact Form Submission</h1>
-      <p><strong>Name:</strong> ${data.name}</p>
-      <p><strong>Email:</strong> ${data.email}</p>
-      <p><strong>Phone:</strong> ${data.phone || "Not provided"}</p>
-      <p><strong>Company Name:</strong> ${data.company || "Not provided"}</p>
-      <p><strong>Subject:</strong> ${data.subject}</p>
-      <p><strong>Message:</strong> ${data.message}</p>
-    `;
+    const row = (label: string, value: string) =>
+      value ? `<p><strong>${label}:</strong> ${escapeHtml(value)}</p>` : '';
 
-    // Configure email options
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to:
-        process.env.CONTACT_F0RM_RECIPIENT_EMAIL ||
-        "office@purewayslogistics.co.uk",
-      subject: `Contact Form: ${data.subject}`,
-      html: emailContent,
-    };
+    await sendOfficeEmail({
+      subject: `Website enquiry: ${subject}`,
+      replyTo: email,
+      html: `
+        <h1>New website enquiry</h1>
+        ${row('Name', name)}
+        ${row('Email', email)}
+        ${row('Phone', phone)}
+        ${row('Company', company)}
+        ${row('Subject', subject)}
+        <p><strong>Message:</strong></p>
+        <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
+      `,
+    });
 
-    // Send the email
-    await transporter.sendMail(mailOptions);
-
-    // Return success response
-    return NextResponse.json(
-      { message: "Message sent successfully" },
-      { status: 200 },
-    );
+    return NextResponse.json({ message: 'Message sent' });
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.error('Error sending contact email:', error);
     return NextResponse.json(
-      { error: "Failed to send message" },
-      { status: 500 },
+      { error: 'Failed to send message' },
+      { status: 500 }
     );
   }
 }

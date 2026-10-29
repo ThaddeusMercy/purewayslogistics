@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
     {
       icon: <Phone size={24} />,
       title: "Phone Numbers",
-      details: ["+44 7544 415 535"],
+      details: ["+44 7388 752493"],
     },
     {
       icon: <Mail size={24} />,
@@ -329,7 +329,7 @@ const Contact: React.FC = () => {
                       <p key={i} className="text-secondary-700">
                         {item.title === "Phone Numbers" ? (
                           <a
-                            href="tel:+447544415535"
+                            href="tel:+447388752493"
                             className="text-secondary-700 hover:text-accent-500 transition-colors"
                           >
                             {detail}
