@@ -12,7 +12,6 @@ import landscape1 from '@/public/images/landscape1.png';
 
 const About: React.FC = () => {
   useEffect(() => {
-    document.title = 'About Us - Pureways Logistics';
     window.scrollTo(0, 0);
   }, []);
 

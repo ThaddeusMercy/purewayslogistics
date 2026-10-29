@@ -8,7 +8,6 @@ import { motion } from 'framer-motion';
 const NotFound: React.FC = () => {
   useEffect(() => {
     // Set page title
-    document.title = 'Page Not Found - Pureway Logistics';
     // Scroll to top on page load
     window.scrollTo(0, 0);
   }, []);

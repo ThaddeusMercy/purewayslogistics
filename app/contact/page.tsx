@@ -11,7 +11,6 @@ type FormStatusType = "success" | "error" | "idle";
 
 const Contact: React.FC = () => {
   useEffect(() => {
-    document.title = "Contact Us - Pureways Logistics";
     window.scrollTo(0, 0);
   }, []);
 

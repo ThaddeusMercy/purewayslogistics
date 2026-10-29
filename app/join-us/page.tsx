@@ -15,7 +15,6 @@ import carrrer from '@/public/images/carrrer.jpg';
 const Careers: React.FC = () => {
 
   useEffect(() => {
-    document.title = 'Join Us - Pureways Logistics';
     window.scrollTo(0, 0);
   }, []);
 

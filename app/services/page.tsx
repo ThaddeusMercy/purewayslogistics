@@ -12,7 +12,6 @@ import verticalmanbw from '@/public/images/brandeddeliveryman.png';
 
 const CourierServices: React.FC = () => {
   useEffect(() => {
-    document.title = 'Services - Pureway Logistics';
     window.scrollTo(0, 0);
   }, []);
 
